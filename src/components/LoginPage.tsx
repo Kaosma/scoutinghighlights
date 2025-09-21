@@ -98,11 +98,6 @@ const ErrorMessage = styled.div`
   text-align: center;
 `;
 
-const BasketballIcon = styled.div`
-  font-size: 3rem;
-  margin-bottom: 1rem;
-`;
-
 const LoginForm = styled.form`
   display: flex;
   flex-direction: column;

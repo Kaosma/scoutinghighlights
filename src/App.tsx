@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import styled from 'styled-components';
 import TeamPage from './components/TeamPage.tsx';
 import PlayerPage from './components/PlayerPage.tsx';
 import VideoPage from './components/VideoPage.tsx';
@@ -6,11 +7,15 @@ import LoginPage from './components/LoginPage.tsx';
 import ProtectedRoute from './components/ProtectedRoute.tsx';
 import { AuthProvider } from './contexts/AuthContext';
 
+const AppContainer = styled.div`
+  /* Add any app-level styles here if needed */
+`;
+
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="app">
+        <AppContainer>
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/" element={
@@ -29,7 +34,7 @@ function App() {
               </ProtectedRoute>
             } />
           </Routes>
-        </div>
+        </AppContainer>
       </Router>
     </AuthProvider>
   );
