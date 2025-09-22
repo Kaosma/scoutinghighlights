@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { players, teams } from '../data.ts';
 import type { Player } from '../types.ts';
@@ -199,16 +200,22 @@ const JerseyNumber = styled.div`
   }
 `;
 
-const ProfileIcon = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 4rem;
-  color: #6b7280;
-  font-size: 1.25rem;
+const ProfilePlaceholder = styled.div`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 2rem;
 
   @media (max-width: 768px) {
-    top: 0.75rem;
-    right: 3.5rem;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
   }
 `;
 
@@ -221,6 +228,36 @@ const ErrorTitle = styled.h2`
   color: #ef4444;
   margin-bottom: 1rem;
 `;
+
+const PlayerImageComponent = ({ player }: { player: Player }) => {
+  const [imageError, setImageError] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
+
+  const hasValidImage = player.profileImage && player.profileImage.trim() !== '';
+
+  const handleImageError = () => {
+    setImageError(true);
+    setImageLoading(false);
+  };
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
+  if (!hasValidImage || imageError) {
+    return <ProfilePlaceholder>👤</ProfilePlaceholder>;
+  }
+
+  return (
+    <PlayerProfileImage
+      src={player.profileImage}
+      alt={player.name}
+      onError={handleImageError}
+      onLoad={handleImageLoad}
+      style={{ display: imageLoading ? 'none' : 'block' }}
+    />
+  );
+};
 
 const PlayerPage = () => {
   const { teamId } = useParams<{ teamId: string }>();
@@ -235,6 +272,13 @@ const PlayerPage = () => {
 
   const handleBackClick = () => {
     navigate('/');
+  };
+
+  const displayJerseyNumber = (jerseyNumber: number) => {
+    if (jerseyNumber === 999) {
+      return '-';
+    }
+    return '#' + jerseyNumber;
   };
 
   if (!team) {
@@ -267,13 +311,13 @@ const PlayerPage = () => {
           >
             <PlayerCardContent>
               <PlayerImage>
-                <PlayerProfileImage src={player.profileImage} alt={player.name} />
+                <PlayerImageComponent player={player} />
               </PlayerImage>
               <PlayerInfo>
                 <PlayerName>{player.name}</PlayerName>
                 <PlayerPosition>{player.position}</PlayerPosition>
                 <PlayerDetails>
-                  {player.height} cm • {player.birthYear}
+                  {player.birthYear}
                 </PlayerDetails>
                 <VideoCount>
                   <PlayIcon>▶</PlayIcon>
@@ -281,9 +325,8 @@ const PlayerPage = () => {
                 </VideoCount>
               </PlayerInfo>
               <JerseyNumber>
-                #{player.jerseyNumber}
+                {displayJerseyNumber(player.jerseyNumber)}
               </JerseyNumber>
-              <ProfileIcon>👤</ProfileIcon>
             </PlayerCardContent>
           </PlayerCard>
         ))}

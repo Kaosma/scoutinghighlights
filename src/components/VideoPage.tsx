@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import styled from 'styled-components';
-import { videos, players, teams } from '../data.ts';
-import type { Player } from '../types.ts';
+import { players, teams } from '../data.ts';
+import type { Player, Video } from '../types.ts';
 
 const VideoPageContainer = styled.div`
   padding: 2rem;
@@ -12,7 +13,6 @@ const VideoPageContainer = styled.div`
     padding: 1rem;
   }
 `;
-
 const PageHeader = styled.div`
   display: flex;
   align-items: center;
@@ -25,7 +25,6 @@ const PageHeader = styled.div`
     gap: 0.5rem;
   }
 `;
-
 const BackButton = styled.button`
   background: #f3f4f6;
   border: 1px solid #d1d5db;
@@ -41,21 +40,12 @@ const BackButton = styled.button`
     border-color: #9ca3af;
   }
 `;
-
-const PageTitle = styled.h1`
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #1f2937;
-  margin: 0;
-`;
-
 const H2Title = styled.h2`
   font-size: 1.5rem;
   font-weight: bold;
   color: #1f2937;
   margin: 0;
 `;
-
 const PlayerInfoSection = styled.div`
   background: white;
   border-radius: 12px;
@@ -64,7 +54,6 @@ const PlayerInfoSection = styled.div`
   margin-bottom: 2rem;
   border: 1px solid #e5e7eb;
 `;
-
 const PlayerDetails = styled.div`
   display: flex;
   align-items: center;
@@ -75,7 +64,6 @@ const PlayerDetails = styled.div`
     text-align: center;
   }
 `;
-
 const PlayerAvatar = styled.img`
   width: 80px;
   height: 80px;
@@ -83,7 +71,24 @@ const PlayerAvatar = styled.img`
   object-fit: cover;
   border: 2px solid #e5e7eb;
 `;
+const ProfilePlaceholder = styled.div`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 2rem;
 
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+`;
 const PlayerMeta = styled.div`
   h2 {
     font-size: 1.5rem;
@@ -92,19 +97,16 @@ const PlayerMeta = styled.div`
     margin: 0 0 0.5rem 0;
   }
 `;
-
 const PlayerMetaText = styled.p`
   color: #6b7280;
   margin: 0.25rem 0;
   font-size: 0.875rem;
 `;
-
-const VideoThumbnailImage = styled.img`
+const VideoPlayer = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
-
 const VideosGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -115,7 +117,6 @@ const VideosGrid = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
 const VideoCard = styled.div`
   background: white;
   border-radius: 12px;
@@ -130,7 +131,6 @@ const VideoCard = styled.div`
     border-color: #3b82f6;
   }
 `;
-
 const VideoThumbnail = styled.div`
   position: relative;
   width: 100%;
@@ -141,7 +141,6 @@ const VideoThumbnail = styled.div`
     height: 180px;
   }
 `;
-
 const PlayButton = styled.div`
   position: absolute;
   top: 50%;
@@ -167,7 +166,6 @@ const PlayButton = styled.div`
     height: 50px;
   }
 `;
-
 const PlayIcon = styled.div`
   color: white;
   font-size: 1.5rem;
@@ -177,61 +175,6 @@ const PlayIcon = styled.div`
     font-size: 1.25rem;
   }
 `;
-
-const VideoDuration = styled.div`
-  position: absolute;
-  bottom: 0.75rem;
-  right: 0.75rem;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: 500;
-`;
-
-const VideoInfo = styled.div`
-  padding: 1rem;
-`;
-
-const VideoTitle = styled.h3`
-  font-size: 1.125rem;
-  font-weight: bold;
-  color: #1f2937;
-  margin: 0 0 0.75rem 0;
-  line-height: 1.4;
-`;
-
-const VideoMeta = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-`;
-
-const VideoDate = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: #6b7280;
-`;
-
-const VideoDurationText = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: #6b7280;
-`;
-
-const CalendarIcon = styled.span`
-  font-size: 0.75rem;
-`;
-
-const ClockIcon = styled.span`
-  font-size: 0.75rem;
-`;
-
 const ErrorMessage = styled.div`
   text-align: center;
   padding: 4rem 2rem;
@@ -242,13 +185,59 @@ const ErrorMessage = styled.div`
   }
 `;
 
+const PlayerImageComponent = ({ player }: { player: Player }) => {
+  const [imageError, setImageError] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
+
+  const hasValidImage = player.profileImage && player.profileImage.trim() !== '';
+
+  const handleImageError = () => {
+    setImageError(true);
+    setImageLoading(false);
+  };
+
+  const handleImageLoad = () => {
+    setImageLoading(false);
+  };
+
+  if (!hasValidImage || imageError) {
+    return <ProfilePlaceholder>👤</ProfilePlaceholder>;
+  }
+
+  return (
+    <PlayerAvatar
+      src={player.profileImage}
+      alt={player.name}
+      onError={handleImageError}
+      onLoad={handleImageLoad}
+      style={{ display: imageLoading ? 'none' : 'block' }}
+    />
+  );
+};
+
 const VideoPage = () => {
   const { playerId } = useParams<{ playerId: string }>();
   const navigate = useNavigate();
+  const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
 
   const player = players.find((p: Player) => p.id === playerId);
   const team = player ? teams.find(t => t.id === player.teamId) : null;
-  const playerVideos = videos.filter(v => v.playerId === playerId);
+  const bucketUrl = 'https://pub-eb9c5999778c49ef994ffcbb5e3f3c04.r2.dev/';
+  const videoUrl = `${bucketUrl}${team?.name.toLowerCase()}/number${player?.jerseyNumber}.mp4`;
+
+  // Create a video object from the videoUrl and add it to playerVideos
+  const playerVideos: Video[] = [];
+
+  // Only add the video if we have valid team and player data, and jersey number is not 999
+  if (team && player && player.jerseyNumber !== 999) {
+    const generatedVideo = {
+      id: `generated-${player.id}-${player.jerseyNumber}`,
+      playerId: player.id,
+      videoUrl: videoUrl
+    };
+
+    playerVideos.push(generatedVideo);
+  }
 
   const handleBackClick = () => {
     if (player) {
@@ -257,6 +246,12 @@ const VideoPage = () => {
       navigate('/');
     }
   };
+
+  const handlePlayClick = (videoId: string) => {
+    console.log(videoUrl);
+    setPlayingVideoId(playingVideoId === videoId ? null : videoId);
+  };
+
 
   if (!player || !team) {
     return (
@@ -277,16 +272,15 @@ const VideoPage = () => {
         <BackButton onClick={handleBackClick}>
           ← Back to {team.name}
         </BackButton>
-        <PageTitle>{player.name} - Videos</PageTitle>
       </PageHeader>
 
       <PlayerInfoSection>
         <PlayerDetails>
-          <PlayerAvatar src={player.profileImage} alt={player.name} />
+          <PlayerImageComponent player={player} />
           <PlayerMeta>
             <H2Title>{player.name}</H2Title>
             <PlayerMetaText>{player.position} • #{player.jerseyNumber}</PlayerMetaText>
-            <PlayerMetaText>{player.height} cm • {player.birthYear} years</PlayerMetaText>
+            <PlayerMetaText>{player.birthYear}</PlayerMetaText>
           </PlayerMeta>
         </PlayerDetails>
       </PlayerInfoSection>
@@ -295,25 +289,21 @@ const VideoPage = () => {
         {playerVideos.map((video) => (
           <VideoCard key={video.id}>
             <VideoThumbnail>
-              <VideoThumbnailImage src={video.thumbnail} alt={video.title} />
-              <PlayButton>
-                <PlayIcon>▶</PlayIcon>
-              </PlayButton>
-              <VideoDuration>{video.duration}</VideoDuration>
+              {playingVideoId === video.id && video.videoUrl ? (
+                <VideoPlayer
+                  src={video.videoUrl}
+                  controls
+                  autoPlay
+                  onEnded={() => setPlayingVideoId(null)}
+                />
+              ) : (
+                <>
+                  <PlayButton onClick={() => handlePlayClick(video.id)}>
+                    <PlayIcon>▶</PlayIcon>
+                  </PlayButton>
+                </>
+              )}
             </VideoThumbnail>
-            <VideoInfo>
-              <VideoTitle>{video.title}</VideoTitle>
-              <VideoMeta>
-                <VideoDate>
-                  <CalendarIcon>📅</CalendarIcon>
-                  {video.date}
-                </VideoDate>
-                <VideoDurationText>
-                  <ClockIcon>🕐</ClockIcon>
-                  {video.duration}
-                </VideoDurationText>
-              </VideoMeta>
-            </VideoInfo>
           </VideoCard>
         ))}
       </VideosGrid>

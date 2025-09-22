@@ -12,7 +12,6 @@ export interface Player {
   position: string;
   jerseyNumber: number;
   birthYear: number;
-  height: number;
   teamId: string;
   videoCount: number;
   profileImage: string;
@@ -20,9 +19,6 @@ export interface Player {
 
 export interface Video {
   id: string;
-  title: string;
-  duration: string;
-  date: string;
   playerId: string;
-  thumbnail: string;
+  videoUrl?: string;
 }
