@@ -4,98 +4,84 @@ export const teams: Team[] = [
   {
     id: '1',
     name: 'Djurgården',
-    playerCount: 12,
     colors: ['#1E40AF', '#FCD34D'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '2',
     name: 'Huddinge',
-    playerCount: 18,
     colors: ['#000000', '#FFFFFF'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '3',
     name: 'Alvik',
-    playerCount: 15,
     colors: ['#10B981', '#FCD34D'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '4',
     name: 'Eskilstuna',
-    playerCount: 16,
     colors: ['#fff', '#1E40AF'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '5',
     name: 'Trelleborg',
-    playerCount: 11,
     colors: ['#DC2626', '#FFFFFF'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '6',
     name: 'Eos',
-    playerCount: 13,
     colors: ['green', '#FFFFFF'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '7',
     name: 'Fryshuset',
-    playerCount: 13,
     colors: ['#000000', '#0EA5E9'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '8',
     name: 'AIK',
-    playerCount: 15,
     colors: ['#000000', '#FCD34D'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '9',
     name: 'Aros',
-    playerCount: 18,
     colors: ['#fff', '#000'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '10',
     name: 'Sollentuna',
-    playerCount: 13,
     colors: ['#0EA5E9', '#FFFFFF'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '11',
     name: 'Malbas',
-    playerCount: 13,
     colors: ['#F97316', '#FFFFFF'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '12',
     name: 'Ockelbo',
-    playerCount: 11,
     colors: ['#F97316', '#000000'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '13',
     name: 'Wetterbygden',
-    playerCount: 15,
     colors: ['#1E40AF', '#F97316'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
   {
     id: '14',
     name: 'Blackeberg',
-    playerCount: 16,
     colors: ['#DC2626', '#FFFFFF'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   }
@@ -110,7 +96,6 @@ export const players: Player[] = [
     jerseyNumber: 14,
     birthYear: 1996,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -120,7 +105,6 @@ export const players: Player[] = [
     jerseyNumber: 13,
     birthYear: 2007,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -130,7 +114,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2006,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -140,7 +123,6 @@ export const players: Player[] = [
     jerseyNumber: 12,
     birthYear: 1995,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -150,7 +132,6 @@ export const players: Player[] = [
     jerseyNumber: 9,
     birthYear: 2004,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -160,7 +141,6 @@ export const players: Player[] = [
     jerseyNumber: 4,
     birthYear: 1999,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -170,7 +150,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 1998,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -180,7 +159,6 @@ export const players: Player[] = [
     jerseyNumber: 6,
     birthYear: 1999,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -190,7 +168,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2003,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -200,7 +177,6 @@ export const players: Player[] = [
     jerseyNumber: 11,
     birthYear: 1998,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -210,7 +186,6 @@ export const players: Player[] = [
     jerseyNumber: 7,
     birthYear: 2004,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -220,7 +195,6 @@ export const players: Player[] = [
     jerseyNumber: 8,
     birthYear: 2006,
     teamId: '1',
-    videoCount: 0,
     profileImage: ''
   },
   // Huddinge
@@ -231,7 +205,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2006,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -241,7 +214,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2005,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -251,7 +223,6 @@ export const players: Player[] = [
     jerseyNumber: 6,
     birthYear: 2000,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -261,7 +232,6 @@ export const players: Player[] = [
     jerseyNumber: 4,
     birthYear: 2005,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -271,7 +241,6 @@ export const players: Player[] = [
     jerseyNumber: 2,
     birthYear: 2004,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -281,7 +250,6 @@ export const players: Player[] = [
     jerseyNumber: 8,
     birthYear: 2004,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -291,7 +259,6 @@ export const players: Player[] = [
     jerseyNumber: 22,
     birthYear: 1998,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -301,7 +268,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2006,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -311,7 +277,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2001,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -321,7 +286,6 @@ export const players: Player[] = [
     jerseyNumber: 9,
     birthYear: 2007,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -331,7 +295,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2007,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -341,7 +304,6 @@ export const players: Player[] = [
     jerseyNumber: 17,
     birthYear: 1997,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -351,7 +313,6 @@ export const players: Player[] = [
     jerseyNumber: 15,
     birthYear: 1999,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -361,7 +322,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2003,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -371,7 +331,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2006,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -381,7 +340,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2007,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -391,7 +349,6 @@ export const players: Player[] = [
     jerseyNumber: 23,
     birthYear: 2004,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -401,7 +358,6 @@ export const players: Player[] = [
     jerseyNumber: 12,
     birthYear: 2004,
     teamId: '2',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -413,7 +369,6 @@ export const players: Player[] = [
     jerseyNumber: 15,
     birthYear: 2007,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -423,7 +378,6 @@ export const players: Player[] = [
     jerseyNumber: 14,
     birthYear: 2008,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -433,7 +387,6 @@ export const players: Player[] = [
     jerseyNumber: 12,
     birthYear: 2005,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -443,7 +396,6 @@ export const players: Player[] = [
     jerseyNumber: 22,
     birthYear: 2002,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -453,7 +405,6 @@ export const players: Player[] = [
     jerseyNumber: 11,
     birthYear: 2007,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -463,7 +414,6 @@ export const players: Player[] = [
     jerseyNumber: 6,
     birthYear: 2002,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -473,7 +423,6 @@ export const players: Player[] = [
     jerseyNumber: 0,
     birthYear: 2006,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -483,7 +432,6 @@ export const players: Player[] = [
     jerseyNumber: 13,
     birthYear: 2006,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -493,7 +441,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2007,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -503,7 +450,6 @@ export const players: Player[] = [
     jerseyNumber: 31,
     birthYear: 1994,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -513,7 +459,6 @@ export const players: Player[] = [
     jerseyNumber: 16,
     birthYear: 2007,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -523,7 +468,6 @@ export const players: Player[] = [
     jerseyNumber: 3,
     birthYear: 2005,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -533,7 +477,6 @@ export const players: Player[] = [
     jerseyNumber: 10,
     birthYear: 2005,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -543,7 +486,6 @@ export const players: Player[] = [
     jerseyNumber: 7,
     birthYear: 2007,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -553,7 +495,6 @@ export const players: Player[] = [
     jerseyNumber: 8,
     birthYear: 2000,
     teamId: '3',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -565,7 +506,6 @@ export const players: Player[] = [
     jerseyNumber: 47,
     birthYear: 1998,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -575,7 +515,6 @@ export const players: Player[] = [
     jerseyNumber: 14,
     birthYear: 1999,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -585,7 +524,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 1999,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -595,7 +533,6 @@ export const players: Player[] = [
     jerseyNumber: 15,
     birthYear: 2007,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -605,7 +542,6 @@ export const players: Player[] = [
     jerseyNumber: 10,
     birthYear: 2007,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -615,7 +551,6 @@ export const players: Player[] = [
     jerseyNumber: 8,
     birthYear: 2004,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -625,7 +560,6 @@ export const players: Player[] = [
     jerseyNumber: 24,
     birthYear: 2000,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -635,7 +569,6 @@ export const players: Player[] = [
     jerseyNumber: 7,
     birthYear: 2004,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -645,7 +578,6 @@ export const players: Player[] = [
     jerseyNumber: 4,
     birthYear: 2001,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -655,7 +587,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2006,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -665,7 +596,6 @@ export const players: Player[] = [
     jerseyNumber: 14,
     birthYear: 2000,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -675,7 +605,6 @@ export const players: Player[] = [
     jerseyNumber: 6,
     birthYear: 2002,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -685,7 +614,6 @@ export const players: Player[] = [
     jerseyNumber: 3,
     birthYear: 2003,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -695,7 +623,6 @@ export const players: Player[] = [
     jerseyNumber: 11,
     birthYear: 2007,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -705,7 +632,6 @@ export const players: Player[] = [
     jerseyNumber: 9,
     birthYear: 2000,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -715,7 +641,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2001,
     teamId: '4',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -727,7 +652,6 @@ export const players: Player[] = [
     jerseyNumber: 27,
     birthYear: 2008,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -737,7 +661,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2008,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -747,7 +670,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2006,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -757,7 +679,6 @@ export const players: Player[] = [
     jerseyNumber: 8,
     birthYear: 2005,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -767,7 +688,6 @@ export const players: Player[] = [
     jerseyNumber: 12,
     birthYear: 1999,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -777,7 +697,6 @@ export const players: Player[] = [
     jerseyNumber: 15,
     birthYear: 2007,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -787,7 +706,6 @@ export const players: Player[] = [
     jerseyNumber: 3,
     birthYear: 2004,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -797,7 +715,6 @@ export const players: Player[] = [
     jerseyNumber: 19,
     birthYear: 2007,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -807,7 +724,6 @@ export const players: Player[] = [
     jerseyNumber: 2,
     birthYear: 2007,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -817,7 +733,6 @@ export const players: Player[] = [
     jerseyNumber: 6,
     birthYear: 1999,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -827,7 +742,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2001,
     teamId: '5',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -836,30 +750,27 @@ export const players: Player[] = [
     id: '73',
     name: 'Ahmad Okdeh',
     position: 'Center',
-    jerseyNumber: 14,
+    jerseyNumber: 8,
     birthYear: 2003,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '74',
     name: 'Felix Wollberg',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 2,
     birthYear: 2004,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '75',
     name: 'Filip Forsgren',
     position: 'Guard',
-    jerseyNumber: 2,
+    jerseyNumber: 21,
     birthYear: 2003,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -869,17 +780,15 @@ export const players: Player[] = [
     jerseyNumber: 14,
     birthYear: 2006,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '77',
     name: 'Hannes Mejare Berntsson',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 4,
     birthYear: 2002,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -889,7 +798,6 @@ export const players: Player[] = [
     jerseyNumber: 9,
     birthYear: 2003,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -899,7 +807,6 @@ export const players: Player[] = [
     jerseyNumber: 13,
     birthYear: 2005,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -909,7 +816,6 @@ export const players: Player[] = [
     jerseyNumber: 3,
     birthYear: 2005,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -919,7 +825,6 @@ export const players: Player[] = [
     jerseyNumber: 19,
     birthYear: 2001,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -929,7 +834,6 @@ export const players: Player[] = [
     jerseyNumber: 1,
     birthYear: 2004,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -939,17 +843,15 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2005,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '84',
     name: 'Philippe Auvray',
     position: 'Forward',
-    jerseyNumber: 55,
+    jerseyNumber: 50,
     birthYear: 2003,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -959,7 +861,6 @@ export const players: Player[] = [
     jerseyNumber: 7,
     birthYear: 2007,
     teamId: '6',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -971,7 +872,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2009,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -981,7 +881,6 @@ export const players: Player[] = [
     jerseyNumber: 27,
     birthYear: 2009,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -991,7 +890,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2008,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1001,7 +899,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2006,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1011,7 +908,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2008,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1021,7 +917,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2002,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1031,7 +926,6 @@ export const players: Player[] = [
     jerseyNumber: 10,
     birthYear: 1993,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1041,17 +935,15 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2008,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '94',
     name: 'Micheal Odinks',
     position: 'Forward',
-    jerseyNumber: 999,
+    jerseyNumber: 10,
     birthYear: 2009,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1061,27 +953,24 @@ export const players: Player[] = [
     jerseyNumber: 34,
     birthYear: 2004,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '96',
     name: 'Rodrigas Jucevicius',
     position: 'Forward',
-    jerseyNumber: 999,
+    jerseyNumber: 13,
     birthYear: 2008,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '97',
     name: 'Samoro Njie Unger',
     position: 'Center',
-    jerseyNumber: 999,
+    jerseyNumber: 11,
     birthYear: 1995,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1091,7 +980,6 @@ export const players: Player[] = [
     jerseyNumber: 9,
     birthYear: 2008,
     teamId: '7',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -1103,7 +991,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 1993,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1113,7 +1000,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2006,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1123,7 +1009,6 @@ export const players: Player[] = [
     jerseyNumber: 10,
     birthYear: 2004,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1133,7 +1018,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2004,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1143,7 +1027,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 1993,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1153,7 +1036,6 @@ export const players: Player[] = [
     jerseyNumber: 4,
     birthYear: 2003,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1163,7 +1045,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2004,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1173,7 +1054,6 @@ export const players: Player[] = [
     jerseyNumber: 9,
     birthYear: 2006,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1183,7 +1063,6 @@ export const players: Player[] = [
     jerseyNumber: 7,
     birthYear: 2006,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1193,7 +1072,6 @@ export const players: Player[] = [
     jerseyNumber: 11,
     birthYear: 1996,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1203,7 +1081,6 @@ export const players: Player[] = [
     jerseyNumber: 11,
     birthYear: 2000,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1213,7 +1090,6 @@ export const players: Player[] = [
     jerseyNumber: 22,
     birthYear: 2006,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1223,7 +1099,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2009,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1233,7 +1108,6 @@ export const players: Player[] = [
     jerseyNumber: 18,
     birthYear: 2006,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1243,7 +1117,6 @@ export const players: Player[] = [
     jerseyNumber: 6,
     birthYear: 2002,
     teamId: '8',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -1255,7 +1128,6 @@ export const players: Player[] = [
     jerseyNumber: 15,
     birthYear: 2000,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1265,7 +1137,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2000,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1275,7 +1146,6 @@ export const players: Player[] = [
     jerseyNumber: 4,
     birthYear: 2003,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1285,7 +1155,6 @@ export const players: Player[] = [
     jerseyNumber: 9,
     birthYear: 2003,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1295,7 +1164,6 @@ export const players: Player[] = [
     jerseyNumber: 7,
     birthYear: 2007,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1305,7 +1173,6 @@ export const players: Player[] = [
     jerseyNumber: 11,
     birthYear: 2006,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1315,7 +1182,6 @@ export const players: Player[] = [
     jerseyNumber: 24,
     birthYear: 2007,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1325,7 +1191,6 @@ export const players: Player[] = [
     jerseyNumber: 10,
     birthYear: 1997,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1335,7 +1200,6 @@ export const players: Player[] = [
     jerseyNumber: 12,
     birthYear: 1994,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1345,7 +1209,6 @@ export const players: Player[] = [
     jerseyNumber: 1,
     birthYear: 2003,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1355,7 +1218,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2006,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1365,7 +1227,6 @@ export const players: Player[] = [
     jerseyNumber: 46,
     birthYear: 1997,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1375,7 +1236,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2004,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -1387,7 +1247,6 @@ export const players: Player[] = [
     jerseyNumber: 14,
     birthYear: 2003,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1397,7 +1256,6 @@ export const players: Player[] = [
     jerseyNumber: 19,
     birthYear: 2002,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1407,7 +1265,6 @@ export const players: Player[] = [
     jerseyNumber: 77,
     birthYear: 2002,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1417,7 +1274,6 @@ export const players: Player[] = [
     jerseyNumber: 3,
     birthYear: 2002,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1427,7 +1283,6 @@ export const players: Player[] = [
     jerseyNumber: 13,
     birthYear: 1998,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1437,7 +1292,6 @@ export const players: Player[] = [
     jerseyNumber: 10,
     birthYear: 2001,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1447,7 +1301,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2007,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1457,7 +1310,6 @@ export const players: Player[] = [
     jerseyNumber: 32,
     birthYear: 2000,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1467,7 +1319,6 @@ export const players: Player[] = [
     jerseyNumber: 15,
     birthYear: 2007,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1477,7 +1328,6 @@ export const players: Player[] = [
     jerseyNumber: 0,
     birthYear: 2005,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1487,7 +1337,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2008,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1497,7 +1346,6 @@ export const players: Player[] = [
     jerseyNumber: 8,
     birthYear: 2006,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1507,7 +1355,6 @@ export const players: Player[] = [
     jerseyNumber: 1,
     birthYear: 2005,
     teamId: '11',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -1519,7 +1366,6 @@ export const players: Player[] = [
     jerseyNumber: 11,
     birthYear: 2005,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1529,7 +1375,6 @@ export const players: Player[] = [
     jerseyNumber: 4,
     birthYear: 1999,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1539,7 +1384,6 @@ export const players: Player[] = [
     jerseyNumber: 21,
     birthYear: 2003,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1549,7 +1393,6 @@ export const players: Player[] = [
     jerseyNumber: 15,
     birthYear: 2007,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1559,7 +1402,6 @@ export const players: Player[] = [
     jerseyNumber: 3,
     birthYear: 2003,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1569,7 +1411,6 @@ export const players: Player[] = [
     jerseyNumber: 47,
     birthYear: 1999,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1579,7 +1420,6 @@ export const players: Player[] = [
     jerseyNumber: 17,
     birthYear: 2003,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1589,7 +1429,6 @@ export const players: Player[] = [
     jerseyNumber: 2,
     birthYear: 2002,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1599,41 +1438,28 @@ export const players: Player[] = [
     jerseyNumber: 12,
     birthYear: 2008,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '149',
     name: 'Younas Mael',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 10,
     birthYear: 2008,
     teamId: '10',
-    videoCount: 0,
     profileImage: ''
   },
   {
     id: '150',
     name: 'Younes Stali',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 88,
     birthYear: 2007,
     teamId: '12',
-    videoCount: 0,
     profileImage: ''
   },
 
   // Wetterbygden
-  {
-    id: '151',
-    name: 'Albin Häll Eriksson',
-    position: 'Guard',
-    jerseyNumber: 999,
-    birthYear: 1996,
-    teamId: '13',
-    videoCount: 0,
-    profileImage: ''
-  },
   {
     id: '152',
     name: 'Alex Drazic',
@@ -1641,7 +1467,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2009,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1651,7 +1476,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2007,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1661,7 +1485,6 @@ export const players: Player[] = [
     jerseyNumber: 22,
     birthYear: 2008,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1671,7 +1494,6 @@ export const players: Player[] = [
     jerseyNumber: 1,
     birthYear: 2005,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1681,7 +1503,6 @@ export const players: Player[] = [
     jerseyNumber: 35,
     birthYear: 1998,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1691,7 +1512,6 @@ export const players: Player[] = [
     jerseyNumber: 11,
     birthYear: 1988,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1701,7 +1521,6 @@ export const players: Player[] = [
     jerseyNumber: 3,
     birthYear: 2005,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1711,7 +1530,6 @@ export const players: Player[] = [
     jerseyNumber: 7,
     birthYear: 1999,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1721,7 +1539,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2007,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1731,7 +1548,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2000,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1741,7 +1557,6 @@ export const players: Player[] = [
     jerseyNumber: 34,
     birthYear: 2002,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1751,7 +1566,6 @@ export const players: Player[] = [
     jerseyNumber: 12,
     birthYear: 2007,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1761,7 +1575,6 @@ export const players: Player[] = [
     jerseyNumber: 9,
     birthYear: 2004,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1771,7 +1584,6 @@ export const players: Player[] = [
     jerseyNumber: 23,
     birthYear: 2009,
     teamId: '13',
-    videoCount: 0,
     profileImage: ''
   },
 
@@ -1783,7 +1595,6 @@ export const players: Player[] = [
     jerseyNumber: 14,
     birthYear: 2002,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1793,7 +1604,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2008,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1803,7 +1613,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2008,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1813,7 +1622,6 @@ export const players: Player[] = [
     jerseyNumber: 4,
     birthYear: 2008,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1823,7 +1631,6 @@ export const players: Player[] = [
     jerseyNumber: 21,
     birthYear: 2004,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1833,7 +1640,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2008,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1843,7 +1649,6 @@ export const players: Player[] = [
     jerseyNumber: 16,
     birthYear: 2008,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1853,7 +1658,6 @@ export const players: Player[] = [
     jerseyNumber: 25,
     birthYear: 2004,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1863,7 +1667,6 @@ export const players: Player[] = [
     jerseyNumber: 5,
     birthYear: 2006,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1873,7 +1676,6 @@ export const players: Player[] = [
     jerseyNumber: 24,
     birthYear: 2006,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1883,7 +1685,6 @@ export const players: Player[] = [
     jerseyNumber: 6,
     birthYear: 2006,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1893,7 +1694,6 @@ export const players: Player[] = [
     jerseyNumber: 10,
     birthYear: 2006,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1903,7 +1703,6 @@ export const players: Player[] = [
     jerseyNumber: 999,
     birthYear: 2006,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1913,7 +1712,6 @@ export const players: Player[] = [
     jerseyNumber: 12,
     birthYear: 2008,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1923,7 +1721,6 @@ export const players: Player[] = [
     jerseyNumber: 7,
     birthYear: 2006,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   },
   {
@@ -1933,7 +1730,6 @@ export const players: Player[] = [
     jerseyNumber: 1,
     birthYear: 2006,
     teamId: '14',
-    videoCount: 0,
     profileImage: ''
   }
 ];

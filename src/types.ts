@@ -1,7 +1,6 @@
 export interface Team {
   id: string;
   name: string;
-  playerCount: number;
   colors: string[];
   logo: string;
 }
@@ -13,7 +12,6 @@ export interface Player {
   jerseyNumber: number;
   birthYear: number;
   teamId: string;
-  videoCount: number;
   profileImage: string;
 }
 

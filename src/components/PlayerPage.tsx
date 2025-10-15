@@ -163,23 +163,18 @@ const PlayerPosition = styled.p`
 `;
 
 const PlayerDetails = styled.p`
+  display: flex;
   font-size: 0.875rem;
   color: #6b7280;
   margin: 0;
-`;
-
-const VideoCount = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 0.875rem;
-  color: #1f2937;
-  margin-top: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 const PlayIcon = styled.span`
-  color: #f97316;
-  font-size: 0.75rem;
+  color: #3e3e3e;
+  font-size: 2rem;
+  margin-left: 5rem;
 `;
 
 const JerseyNumber = styled.div`
@@ -317,12 +312,8 @@ const PlayerPage = () => {
                 <PlayerName>{player.name}</PlayerName>
                 <PlayerPosition>{player.position}</PlayerPosition>
                 <PlayerDetails>
-                  {player.birthYear}
+                  {player.birthYear} <PlayIcon>▶</PlayIcon>
                 </PlayerDetails>
-                <VideoCount>
-                  <PlayIcon>▶</PlayIcon>
-                  {player.videoCount} video{player.videoCount !== 1 ? 's' : ''}
-                </VideoCount>
               </PlayerInfo>
               <JerseyNumber>
                 {displayJerseyNumber(player.jerseyNumber)}

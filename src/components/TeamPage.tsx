@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { teams } from '../data.ts';
+import { teams, players } from '../data.ts';
+import type { Team } from '../types.ts';
 
 const TeamPageContainer = styled.div`
   padding: 2rem;
@@ -127,11 +128,15 @@ const TeamPage = () => {
     navigate(`/team/${teamId}`);
   };
 
+  const getPlayerCount = (teamId: string) => {
+    return players.filter(player => player.teamId === teamId).length;
+  };
+
   return (
     <TeamPageContainer>
       <PageTitle>Superettan</PageTitle>
       <TeamsGrid>
-        {teams.map((team) => (
+        {teams.map((team: Team) => (
           <TeamCard
             key={team.id}
             colors={team.colors}
@@ -142,7 +147,7 @@ const TeamPage = () => {
               <TeamInfo>
                 <TeamName>{team.name}</TeamName>
                 <PlayerCountTag>
-                  {team.playerCount} player{team.playerCount !== 1 ? 's' : ''}
+                  {getPlayerCount(team.id)} player{getPlayerCount(team.id) !== 1 ? 's' : ''}
                 </PlayerCountTag>
               </TeamInfo>
               <ArrowIcon>→</ArrowIcon>
