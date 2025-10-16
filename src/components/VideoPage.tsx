@@ -146,7 +146,7 @@ const PlayButton = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(249, 115, 22, 0.9);
+  background: #000;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -157,7 +157,7 @@ const PlayButton = styled.div`
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(249, 115, 22, 1);
+    background: #000;
     transform: translate(-50%, -50%) scale(1.1);
   }
 
