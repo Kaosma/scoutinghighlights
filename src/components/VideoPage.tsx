@@ -175,6 +175,31 @@ const PlayIcon = styled.div`
     font-size: 1.25rem;
   }
 `;
+const DownloadButton = styled.button`
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.375rem;
+    font-size: 0.7rem;
+  }
+`;
 const ErrorMessage = styled.div`
   text-align: center;
   padding: 4rem 2rem;
@@ -252,6 +277,30 @@ const VideoPage = () => {
     setPlayingVideoId(playingVideoId === videoId ? null : videoId);
   };
 
+  const handleDownloadClick = (videoUrl: string, videoTitle: string) => {
+    try {
+      // For mobile devices, try to open in new tab first
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.open(videoUrl, '_blank');
+        return;
+      }
+
+      // For desktop browsers, use download attribute
+      const link = document.createElement('a');
+      link.href = videoUrl;
+      link.download = `${videoTitle}.mp4`;
+      link.target = '_blank';
+
+      // Append to body, click, and remove
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error('Download failed:', error);
+      // Fallback: open in new tab
+      window.open(videoUrl, '_blank');
+    }
+  };
 
   if (!player || !team) {
     return (
@@ -301,6 +350,14 @@ const VideoPage = () => {
                   <PlayButton onClick={() => handlePlayClick(video.id)}>
                     <PlayIcon>▶</PlayIcon>
                   </PlayButton>
+                  {video.videoUrl && (
+                    <DownloadButton
+                      onClick={() => handleDownloadClick(video.videoUrl!, player.name)}
+                      title="Download video"
+                    >
+                      Download
+                    </DownloadButton>
+                  )}
                 </>
               )}
             </VideoThumbnail>
