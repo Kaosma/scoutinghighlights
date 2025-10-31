@@ -1134,7 +1134,7 @@ export const players: Player[] = [
     id: '115',
     name: 'Felix Jolly Holstad',
     position: 'Forward',
-    jerseyNumber: 999,
+    jerseyNumber: 25,
     birthYear: 2000,
     teamId: '10',
     profileImage: ''
@@ -1233,9 +1233,18 @@ export const players: Player[] = [
     id: '126',
     name: 'Tom Nilsson',
     position: 'Wing',
-    jerseyNumber: 999,
+    jerseyNumber: 22,
     birthYear: 2004,
     teamId: '10',
+    profileImage: ''
+  },
+  {
+    id: '1127',
+    name: 'Isac Angelsen',
+    position: 'Guard',
+    jerseyNumber: 3,
+    birthYear: 2006,
+    teamId: '14',
     profileImage: ''
   },
 

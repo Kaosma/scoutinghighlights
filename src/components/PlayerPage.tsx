@@ -1,8 +1,10 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { players, teams } from '../data.ts';
 import type { Player } from '../types.ts';
+
+type PlayerWithVideoStatus = Player & { hasVideo?: boolean };
 
 const PlayerPageContainer = styled.div<{ colors: string[] }>`
   padding: 2rem;
@@ -260,6 +262,8 @@ const PlayerPage = () => {
 
   const team = teams.find(t => t.id === teamId);
   const teamPlayers = players.filter((p: Player) => p.teamId === teamId);
+  const [playersWithVideoStatus, setPlayersWithVideoStatus] = useState<PlayerWithVideoStatus[]>([]);
+  const bucketUrl = 'https://pub-eb9c5999778c49ef994ffcbb5e3f3c04.r2.dev/';
 
   const handlePlayerClick = (playerId: string) => {
     navigate(`/player/${playerId}`);
@@ -275,6 +279,41 @@ const PlayerPage = () => {
     }
     return '#' + jerseyNumber;
   };
+
+  useEffect(() => {
+    const loadVideoAvailability = async () => {
+      if (!team || teamPlayers.length === 0) return;
+
+      // Check video availability for all players
+      const availabilityPromises = teamPlayers.map(async (player) => {
+        // Skip players with jersey number 999
+        if (player.jerseyNumber === 999) {
+          return { ...player, hasVideo: false };
+        }
+
+        const videoUrl = `${bucketUrl}${team.name.toLowerCase()}/number${player.jerseyNumber}.mp4`;
+        try {
+          const res = await fetch(videoUrl, { method: "HEAD" });
+          return { ...player, hasVideo: res.ok };
+        } catch (error) {
+          return { ...player, hasVideo: false };
+        }
+      });
+
+      const playersWithStatus = await Promise.all(availabilityPromises);
+
+      // Sort: players with videos first, then by jersey number
+      const sortedPlayers = playersWithStatus.sort((a, b) => {
+        if (a.hasVideo && !b.hasVideo) return -1;
+        if (!a.hasVideo && b.hasVideo) return 1;
+        return a.jerseyNumber - b.jerseyNumber;
+      });
+
+      setPlayersWithVideoStatus(sortedPlayers);
+    };
+
+    loadVideoAvailability();
+  }, [team]);
 
   if (!team) {
     return (
@@ -299,7 +338,7 @@ const PlayerPage = () => {
       </PageHeader>
 
       <PlayersGrid>
-        {teamPlayers.map((player: Player) => (
+        {(playersWithVideoStatus.length > 0 ? playersWithVideoStatus : teamPlayers).map((player) => (
           <PlayerCard
             key={player.id}
             onClick={() => handlePlayerClick(player.id)}
@@ -312,7 +351,7 @@ const PlayerPage = () => {
                 <PlayerName>{player.name}</PlayerName>
                 <PlayerPosition>{player.position}</PlayerPosition>
                 <PlayerDetails>
-                  {player.birthYear} <PlayIcon>▶</PlayIcon>
+                  {player.birthYear} <PlayIcon>{'hasVideo' in player && player.hasVideo === false ? 'no video' : '▶'}</PlayIcon>
                 </PlayerDetails>
               </PlayerInfo>
               <JerseyNumber>

@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { players, teams } from '../data.ts';
 import type { Player, Video } from '../types.ts';
@@ -244,17 +244,35 @@ const VideoPage = () => {
   const { playerId } = useParams<{ playerId: string }>();
   const navigate = useNavigate();
   const [playingVideoId, setPlayingVideoId] = useState<string | null>(null);
+  const [hasVideo, setHasVideo] = useState<boolean | null>(null);
 
   const player = players.find((p: Player) => p.id === playerId);
   const team = player ? teams.find(t => t.id === player.teamId) : null;
   const bucketUrl = 'https://pub-eb9c5999778c49ef994ffcbb5e3f3c04.r2.dev/';
   const videoUrl = `${bucketUrl}${team?.name.toLowerCase()}/number${player?.jerseyNumber}.mp4`;
 
-  // Create a video object from the videoUrl and add it to playerVideos
+  // Check if video exists
+  useEffect(() => {
+    const checkVideoExists = async () => {
+      if (!team || !player || player.jerseyNumber === 999) {
+        setHasVideo(false);
+        return;
+      }
+
+      try {
+        const res = await fetch(videoUrl, { method: "HEAD" });
+        setHasVideo(res.ok);
+      } catch (error) {
+        setHasVideo(false);
+      }
+    };
+
+    checkVideoExists();
+  }, [team, player, videoUrl]);
+
   const playerVideos: Video[] = [];
 
-  // Only add the video if we have valid team and player data, and jersey number is not 999
-  if (team && player && player.jerseyNumber !== 999) {
+  if (team && player && player.jerseyNumber !== 999 && hasVideo) {
     const generatedVideo = {
       id: `generated-${player.id}-${player.jerseyNumber}`,
       playerId: player.id,
