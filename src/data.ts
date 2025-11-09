@@ -502,7 +502,7 @@ export const players: Player[] = [
   {
     id: '46',
     name: 'Adam Karahmetovic',
-    position: 'Guard',
+    position: 'Wing',
     jerseyNumber: 47,
     birthYear: 1998,
     teamId: '4',
@@ -511,7 +511,7 @@ export const players: Player[] = [
   {
     id: '47',
     name: 'Aken Muorwel',
-    position: 'Guard',
+    position: 'Wing',
     jerseyNumber: 14,
     birthYear: 1999,
     teamId: '4',
@@ -521,7 +521,7 @@ export const players: Player[] = [
     id: '48',
     name: 'Albin Sandeberg',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 5,
     birthYear: 1999,
     teamId: '4',
     profileImage: ''
@@ -529,7 +529,7 @@ export const players: Player[] = [
   {
     id: '49',
     name: 'Alvar Brådd',
-    position: 'Guard',
+    position: 'Center',
     jerseyNumber: 15,
     birthYear: 2007,
     teamId: '4',
@@ -538,7 +538,7 @@ export const players: Player[] = [
   {
     id: '50',
     name: 'Benjamin Cehic',
-    position: 'Guard',
+    position: 'Wing',
     jerseyNumber: 10,
     birthYear: 2007,
     teamId: '4',
@@ -581,19 +581,10 @@ export const players: Player[] = [
     profileImage: ''
   },
   {
-    id: '55',
-    name: 'John Cooper',
-    position: 'Guard',
-    jerseyNumber: 999,
-    birthYear: 2006,
-    teamId: '4',
-    profileImage: ''
-  },
-  {
     id: '56',
     name: 'Kevin Lieu',
-    position: 'Guard',
-    jerseyNumber: 14,
+    position: 'Wing',
+    jerseyNumber: 999,
     birthYear: 2000,
     teamId: '4',
     profileImage: ''
@@ -628,7 +619,7 @@ export const players: Player[] = [
   {
     id: '60',
     name: 'Simon Findén',
-    position: 'Guard',
+    position: 'Wing',
     jerseyNumber: 9,
     birthYear: 2000,
     teamId: '4',
@@ -637,8 +628,8 @@ export const players: Player[] = [
   {
     id: '61',
     name: 'William Hamzehnejad',
-    position: 'Guard',
-    jerseyNumber: 999,
+    position: 'Wing',
+    jerseyNumber: 2,
     birthYear: 2001,
     teamId: '4',
     profileImage: ''
