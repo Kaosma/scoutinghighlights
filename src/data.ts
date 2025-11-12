@@ -1235,7 +1235,7 @@ export const players: Player[] = [
     position: 'Guard',
     jerseyNumber: 3,
     birthYear: 2006,
-    teamId: '14',
+    teamId: '10',
     profileImage: ''
   },
 
@@ -1601,7 +1601,7 @@ export const players: Player[] = [
     id: '167',
     name: 'Anton Sundquist',
     position: 'Forward',
-    jerseyNumber: 999,
+    jerseyNumber: 18,
     birthYear: 2008,
     teamId: '14',
     profileImage: ''
@@ -1610,7 +1610,7 @@ export const players: Player[] = [
     id: '168',
     name: 'Aran Salih',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 9,
     birthYear: 2008,
     teamId: '14',
     profileImage: ''
@@ -1637,7 +1637,7 @@ export const players: Player[] = [
     id: '171',
     name: 'Edvin Thorén',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 22,
     birthYear: 2008,
     teamId: '14',
     profileImage: ''
@@ -1700,7 +1700,7 @@ export const players: Player[] = [
     id: '178',
     name: 'Per Pfeiffer',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 13,
     birthYear: 2006,
     teamId: '14',
     profileImage: ''
@@ -1729,6 +1729,15 @@ export const players: Player[] = [
     position: 'Guard',
     jerseyNumber: 1,
     birthYear: 2006,
+    teamId: '14',
+    profileImage: ''
+  },
+  {
+    id: '182',
+    name: 'William Segerström',
+    position: 'Wing',
+    jerseyNumber: 8,
+    birthYear: 2004,
     teamId: '14',
     profileImage: ''
   }
