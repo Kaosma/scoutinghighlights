@@ -3,7 +3,7 @@ import type { Team, Player } from "./types";
 export const teams: Team[] = [
   {
     id: '1',
-    name: 'Djurgården',
+    name: 'DIF',
     colors: ['#1E40AF', '#FCD34D'],
     logo: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=100&h=100&fit=crop'
   },
@@ -88,11 +88,11 @@ export const teams: Team[] = [
 ];
 
 export const players: Player[] = [
-  // Djurgården
+  // DIF
   {
     id: '1',
     name: 'Andreas Von Uthmann',
-    position: 'Guard',
+    position: 'Forward',
     jerseyNumber: 14,
     birthYear: 1996,
     teamId: '1',
@@ -127,10 +127,10 @@ export const players: Player[] = [
   },
   {
     id: '5',
-    name: 'Hannes Brasch',
+    name: 'David Niklasson',
     position: 'Guard',
-    jerseyNumber: 9,
-    birthYear: 2004,
+    jerseyNumber: 10,
+    birthYear: 1995,
     teamId: '1',
     profileImage: ''
   },
@@ -146,8 +146,8 @@ export const players: Player[] = [
   {
     id: '7',
     name: 'Lucas Lindh',
-    position: 'Guard',
-    jerseyNumber: 999,
+    position: 'Center',
+    jerseyNumber: 0,
     birthYear: 1998,
     teamId: '1',
     profileImage: ''
@@ -155,7 +155,7 @@ export const players: Player[] = [
   {
     id: '8',
     name: 'Niklas Herring',
-    position: 'Forward',
+    position: 'Wing',
     jerseyNumber: 6,
     birthYear: 1999,
     teamId: '1',
@@ -164,8 +164,8 @@ export const players: Player[] = [
   {
     id: '9',
     name: 'Noel Smeds',
-    position: 'Forward',
-    jerseyNumber: 999,
+    position: 'Guard',
+    jerseyNumber: 7,
     birthYear: 2003,
     teamId: '1',
     profileImage: ''
@@ -174,7 +174,7 @@ export const players: Player[] = [
     id: '10',
     name: 'Pars Esef Erenköy',
     position: 'Guard',
-    jerseyNumber: 11,
+    jerseyNumber: 999,
     birthYear: 1998,
     teamId: '1',
     profileImage: ''
@@ -183,7 +183,7 @@ export const players: Player[] = [
     id: '11',
     name: 'Samuel Pernyér',
     position: 'Guard',
-    jerseyNumber: 7,
+    jerseyNumber: 11,
     birthYear: 2004,
     teamId: '1',
     profileImage: ''
