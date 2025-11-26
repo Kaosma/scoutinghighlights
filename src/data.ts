@@ -382,7 +382,7 @@ export const players: Player[] = [
   },
   {
     id: '332',
-    name: 'FinnEriksson',
+    name: 'Finn Eriksson',
     position: 'Guard',
     jerseyNumber: 14,
     birthYear: 2005,
