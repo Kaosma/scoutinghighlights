@@ -438,7 +438,7 @@ export const players: Player[] = [
     id: '38',
     name: 'Leo Ryott',
     position: 'Wing',
-    jerseyNumber: 13,
+    jerseyNumber: 16,
     birthYear: 2006,
     teamId: '3',
     profileImage: ''
@@ -465,7 +465,7 @@ export const players: Player[] = [
     id: '41',
     name: 'Noah Ranégie',
     position: 'Center',
-    jerseyNumber: 16,
+    jerseyNumber: 999,
     birthYear: 2007,
     teamId: '3',
     profileImage: ''
