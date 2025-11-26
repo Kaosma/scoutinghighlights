@@ -375,8 +375,17 @@ export const players: Player[] = [
     id: '32',
     name: 'Alexander Folin',
     position: 'Guard',
-    jerseyNumber: 14,
+    jerseyNumber: 4,
     birthYear: 2008,
+    teamId: '3',
+    profileImage: ''
+  },
+  {
+    id: '332',
+    name: 'FinnEriksson',
+    position: 'Guard',
+    jerseyNumber: 14,
+    birthYear: 2005,
     teamId: '3',
     profileImage: ''
   },
