@@ -145,19 +145,19 @@ export const players: Player[] = [
   },
   {
     id: '7',
-    name: 'Lucas Lindh',
+    name: 'Johan Crafoord',
     position: 'Center',
     jerseyNumber: 0,
-    birthYear: 1998,
+    birthYear: 2000,
     teamId: '1',
     profileImage: ''
   },
   {
     id: '8',
-    name: 'Niklas Herring',
-    position: 'Wing',
-    jerseyNumber: 6,
-    birthYear: 1999,
+    name: 'Jens Örnehed',
+    position: 'Guard',
+    jerseyNumber: 13,
+    birthYear: 2004,
     teamId: '1',
     profileImage: ''
   },
@@ -172,10 +172,10 @@ export const players: Player[] = [
   },
   {
     id: '10',
-    name: 'Pars Esef Erenköy',
+    name: 'Isac Grytberg',
     position: 'Guard',
-    jerseyNumber: 999,
-    birthYear: 1998,
+    jerseyNumber: 8,
+    birthYear: 2003,
     teamId: '1',
     profileImage: ''
   },
@@ -188,15 +188,7 @@ export const players: Player[] = [
     teamId: '1',
     profileImage: ''
   },
-  {
-    id: '12',
-    name: 'Theo Kermoury',
-    position: 'Forward',
-    jerseyNumber: 8,
-    birthYear: 2006,
-    teamId: '1',
-    profileImage: ''
-  },
+
   // Huddinge
   {
     id: '13',
@@ -253,6 +245,15 @@ export const players: Player[] = [
     profileImage: ''
   },
   {
+    id: '12',
+    name: 'Gabriel Adersteg',
+    position: 'Center',
+    jerseyNumber: 3,
+    birthYear: 1995,
+    teamId: '2',
+    profileImage: ''
+  },
+  {
     id: '19',
     name: 'Glenn Ali',
     position: 'Forward',
@@ -272,10 +273,10 @@ export const players: Player[] = [
   },
   {
     id: '21',
-    name: 'Hampus Åkerberg Åkerman',
-    position: 'Center',
-    jerseyNumber: 999,
-    birthYear: 2001,
+    name: 'Pascal Dahlgren',
+    position: 'Guard',
+    jerseyNumber: 1,
+    birthYear: 2006,
     teamId: '2',
     profileImage: ''
   },
@@ -465,17 +466,17 @@ export const players: Player[] = [
     id: '41',
     name: 'Noah Ranégie',
     position: 'Center',
-    jerseyNumber: 999,
+    jerseyNumber: 3,
     birthYear: 2007,
     teamId: '3',
     profileImage: ''
   },
   {
     id: '42',
-    name: 'Pontus Nilsson',
+    name: 'David Lindahl',
     position: 'Guard',
-    jerseyNumber: 3,
-    birthYear: 2005,
+    jerseyNumber: 1,
+    birthYear: 2009,
     teamId: '3',
     profileImage: ''
   },
@@ -674,10 +675,10 @@ export const players: Player[] = [
   },
   {
     id: '65',
-    name: 'Hugo Okehie',
-    position: 'Guard',
-    jerseyNumber: 8,
-    birthYear: 2005,
+    name: 'Ibbe Klintman',
+    position: 'Forward',
+    jerseyNumber: 1,
+    birthYear: 2001,
     teamId: '5',
     profileImage: ''
   },
@@ -819,6 +820,15 @@ export const players: Player[] = [
     profileImage: ''
   },
   {
+    id: '811',
+    name: 'Kenton Lei',
+    position: 'Guard',
+    jerseyNumber: 7,
+    birthYear: 1998,
+    teamId: '6',
+    profileImage: ''
+  },
+  {
     id: '81',
     name: 'Marc Benson',
     position: 'Center',
@@ -869,7 +879,7 @@ export const players: Player[] = [
     id: '86',
     name: 'Elias Englund Ghebreab',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 24,
     birthYear: 2009,
     teamId: '7',
     profileImage: ''
@@ -878,7 +888,7 @@ export const players: Player[] = [
     id: '87',
     name: 'Frank Nasasa Karlsson',
     position: 'Guard',
-    jerseyNumber: 27,
+    jerseyNumber: 2,
     birthYear: 2009,
     teamId: '7',
     profileImage: ''
@@ -887,7 +897,7 @@ export const players: Player[] = [
     id: '88',
     name: 'Jerome Holm Keita',
     position: 'Forward',
-    jerseyNumber: 999,
+    jerseyNumber: 83,
     birthYear: 2008,
     teamId: '7',
     profileImage: ''
@@ -896,17 +906,17 @@ export const players: Player[] = [
     id: '89',
     name: 'Joakim Calixte Rosengren',
     position: 'Guard',
-    jerseyNumber: 5,
+    jerseyNumber: 25,
     birthYear: 2006,
     teamId: '7',
     profileImage: ''
   },
   {
     id: '90',
-    name: 'Kebba Jawla',
+    name: 'Mustapha Dibba',
     position: 'Forward',
-    jerseyNumber: 999,
-    birthYear: 2008,
+    jerseyNumber: 6,
+    birthYear: 1995,
     teamId: '7',
     profileImage: ''
   },
@@ -923,7 +933,7 @@ export const players: Player[] = [
     id: '92',
     name: 'Leonard Halling Ibo',
     position: 'Center',
-    jerseyNumber: 10,
+    jerseyNumber: 8,
     birthYear: 1993,
     teamId: '7',
     profileImage: ''
@@ -932,7 +942,7 @@ export const players: Player[] = [
     id: '93',
     name: 'Linus Victorin Verkruyssen',
     position: 'Guard',
-    jerseyNumber: 999,
+    jerseyNumber: 3,
     birthYear: 2008,
     teamId: '7',
     profileImage: ''
@@ -950,7 +960,7 @@ export const players: Player[] = [
     id: '95',
     name: 'Pedro Lelo Hök',
     position: 'Guard',
-    jerseyNumber: 34,
+    jerseyNumber: 78,
     birthYear: 2004,
     teamId: '7',
     profileImage: ''
@@ -974,6 +984,15 @@ export const players: Player[] = [
     profileImage: ''
   },
   {
+    id: '977',
+    name: 'Simon Francis',
+    position: 'Forward',
+    jerseyNumber: 1,
+    birthYear: 1995,
+    teamId: '7',
+    profileImage: ''
+  },
+  {
     id: '98',
     name: 'Winston Ilori',
     position: 'Guard',
@@ -986,10 +1005,10 @@ export const players: Player[] = [
   // AIK
   {
     id: '99',
-    name: 'Aleksandar Petrovic',
-    position: 'Forward',
-    jerseyNumber: 9,
-    birthYear: 1993,
+    name: 'Alexander Larsson',
+    position: 'Center',
+    jerseyNumber: 23,
+    birthYear: 1995,
     teamId: '8',
     profileImage: ''
   },
@@ -999,15 +1018,6 @@ export const players: Player[] = [
     position: 'Forward',
     jerseyNumber: 21,
     birthYear: 2006,
-    teamId: '8',
-    profileImage: ''
-  },
-  {
-    id: '101',
-    name: 'Colin McInerney',
-    position: 'Wing',
-    jerseyNumber: 19,
-    birthYear: 2004,
     teamId: '8',
     profileImage: ''
   },
@@ -1093,15 +1103,6 @@ export const players: Player[] = [
     profileImage: ''
   },
   {
-    id: '111',
-    name: 'Remus Jacobsson',
-    position: 'Forward',
-    jerseyNumber: 12,
-    birthYear: 2009,
-    teamId: '8',
-    profileImage: ''
-  },
-  {
     id: '112',
     name: 'Senay Teklit',
     position: 'Guard',
@@ -1150,10 +1151,10 @@ export const players: Player[] = [
   },
   {
     id: '116',
-    name: 'Hugo Lovmar',
+    name: 'Maximus Karamouzis',
     position: 'Guard',
-    jerseyNumber: 4,
-    birthYear: 2003,
+    jerseyNumber: 10,
+    birthYear: 2007,
     teamId: '10',
     profileImage: ''
   },
@@ -1190,15 +1191,6 @@ export const players: Player[] = [
     position: 'Forward',
     jerseyNumber: 24,
     birthYear: 2007,
-    teamId: '10',
-    profileImage: ''
-  },
-  {
-    id: '121',
-    name: 'Noah Kelly',
-    position: 'Center',
-    jerseyNumber: 10,
-    birthYear: 1997,
     teamId: '10',
     profileImage: ''
   },
@@ -1244,15 +1236,6 @@ export const players: Player[] = [
     position: 'Wing',
     jerseyNumber: 22,
     birthYear: 2004,
-    teamId: '10',
-    profileImage: ''
-  },
-  {
-    id: '1127',
-    name: 'Isac Angelsen',
-    position: 'Guard',
-    jerseyNumber: 3,
-    birthYear: 2006,
     teamId: '10',
     profileImage: ''
   },
@@ -1375,6 +1358,15 @@ export const players: Player[] = [
     teamId: '11',
     profileImage: ''
   },
+  {
+    id: '1399',
+    name: 'Oliver Regnér',
+    position: 'Wing',
+    jerseyNumber: 4,
+    birthYear: 2008,
+    teamId: '11',
+    profileImage: ''
+  },
 
   // Ockelbo
   {
@@ -1392,6 +1384,33 @@ export const players: Player[] = [
     position: 'Guard',
     jerseyNumber: 4,
     birthYear: 1999,
+    teamId: '12',
+    profileImage: ''
+  },
+  {
+    id: '1414',
+    name: 'Delano Monkau',
+    position: 'Forward',
+    jerseyNumber: 9,
+    birthYear: 2002,
+    teamId: '12',
+    profileImage: ''
+  },
+  {
+    id: '1413',
+    name: 'Denden Tseadu',
+    position: 'Wing',
+    jerseyNumber: 5,
+    birthYear: 2002,
+    teamId: '12',
+    profileImage: ''
+  },
+  {
+    id: '1412',
+    name: 'Emil Angemo',
+    position: 'Wing',
+    jerseyNumber: 8,
+    birthYear: 2004,
     teamId: '12',
     profileImage: ''
   },
