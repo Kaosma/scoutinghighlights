@@ -507,6 +507,15 @@ export const players: Player[] = [
     teamId: '3',
     profileImage: ''
   },
+  {
+    id: '4555',
+    name: 'Denzel Holm',
+    position: 'Wing',
+    jerseyNumber: 18,
+    birthYear: 2006,
+    teamId: '3',
+    profileImage: ''
+  },
 
   // Eskilstuna
   {
